@@ -6,7 +6,7 @@
 /*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:21:44 by ampjimen          #+#    #+#             */
-/*   Updated: 2023/12/04 19:02:11 by ampjimen         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:08:09 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-void friki()
+/* void friki()
 {
 	system("leaks a.out");
 }
@@ -74,4 +74,4 @@ void friki()
 		
 }	
 	return (0);
-}
+} */

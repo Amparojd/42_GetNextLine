@@ -6,7 +6,7 @@
 /*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:37:57 by ampjimen          #+#    #+#             */
-/*   Updated: 2023/12/04 16:27:36 by ampjimen         ###   ########.fr       */
+/*   Updated: 2023/12/06 12:55:16 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strjoin(char *first_str, char *buf)
 	if (first_str)
 		while (first_str[++i] != '\0')
 			str[i] = first_str[i];
-	while (buf[j]!= '\0')
+	while (buf[j] != '\0')
 		str[i++] = buf[j++];
 	str[i++] = '\0';
 	return (free(first_str), str);
@@ -97,7 +97,6 @@ char	*ft_next_line(char *str)
 	char	*stash;
 
 	i = 0;
-	j = 0;
 	while (str[i] && str[i] != '\n')
 		i++;
 	if (!str[i])
@@ -107,8 +106,9 @@ char	*ft_next_line(char *str)
 	}
 	stash = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
 	if (!stash)
-		return (free(stash), NULL);
+		return (free(str), NULL);
 	i++;
+	j = 0;
 	while (str[i])
 		stash[j++] = str[i++];
 	stash[j] = '\0';

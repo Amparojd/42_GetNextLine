@@ -6,7 +6,7 @@
 /*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:38:00 by ampjimen          #+#    #+#             */
-/*   Updated: 2023/12/04 18:34:43 by ampjimen         ###   ########.fr       */
+/*   Updated: 2023/12/06 12:50:49 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,23 +54,34 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-int main (void)
+/* void a()
+{
+	system("leaks -q a.out");
+}
+
+void ft_amparito(char *str, int fd)
+{
+	write(fd, str, ft_strlen(str));
+} */
+/* int main (void)
 {
 	char	*line;
 	int		fd1;
 	
-	fd1 = open("text.txt", O_RDONLY);
+	atexit(a);
+	fd1 = open("text1.txt", O_RDONLY);
 	
 	while (1)
 	{
 		line = get_next_line(fd1);
-		printf("line : %s", line);
+		
 		if (line == NULL)
 		{
 			break;
 		}
+		printf("line : %s", line);
+		ft_amparito(line, fd1);
 		free(line);
 	}
-	system("leaks -q a.out");
 	return(0);
-} 
+}  */
